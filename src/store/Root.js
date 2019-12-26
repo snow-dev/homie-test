@@ -3,13 +3,13 @@
 
 
 import {applyMiddleware, createStore} from 'redux';
-import RootReducer from './RootReducer';
+import rootReducer from './RootReducer';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
 import React from 'react';
 
-const store = createStore(RootReducer,
+const store = createStore(rootReducer,
 	composeWithDevTools(
 		applyMiddleware(thunk),
 	)
